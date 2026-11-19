@@ -39,10 +39,7 @@
       </a>
 
       <nav class="nav" id="site-nav" aria-label="Primary" data-aria-en="Primary navigation" data-aria-pl="Nawigacja główna">
-        <a class="nav__link" href="#about" data-en="The app" data-pl="Aplikacja">The app</a>
-        <a class="nav__link" href="#features" data-en="Features" data-pl="Funkcje">Features</a>
-        <a class="nav__link" href="#how" data-en="How it works" data-pl="Jak to działa">How it works</a>
-        <a class="nav__link" href="#legal" data-en="Legal" data-pl="Dokumenty">Legal</a>
+        <a class="nav__link" href="#idea" data-en="Idea" data-pl="Idea">Idea</a>
         <a class="nav__link" href="#contact" data-en="Contact" data-pl="Kontakt">Contact</a>
       </nav>
 
@@ -80,29 +77,23 @@
           </p>
 
           <div class="hero__actions">
-            <a class="btn" href="#how" data-en="See how it works" data-pl="Zobacz, jak to działa">See how it works</a>
+            <a class="btn" href="#idea" data-en="See the idea" data-pl="Poznaj ideę">See the idea</a>
             <a class="btn btn--ghost" href="mailto:contact@dishd.pl">contact@dishd.pl</a>
           </div>
 
           <div class="hero__meta">
             <span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7" /></svg>
-              <span data-en="No ads, no trackers" data-pl="Bez reklam i trackerów">No ads, no trackers</span>
+              <span data-en="No trackers" data-pl="Bez trackerów">No trackers</span>
             </span>
             <span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7" /></svg>
               <span data-en="Your recipes stay yours" data-pl="Twoje przepisy zostają Twoje">Your recipes stay yours</span>
             </span>
-            <span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7" /></svg>
-              <span data-en="Delete your account anytime" data-pl="Konto usuniesz w każdej chwili">Delete your account anytime</span>
-            </span>
           </div>
         </div>
 
         <div class="showcase">
-          <img class="showcase__logo" src="media/logo.png" alt="dishd. logo" width="82" height="82" />
-
           <aside class="phone" aria-label="Dishd recipe card preview" data-aria-en="Dishd recipe card preview" data-aria-pl="Podgląd karty przepisu w Dishd">
             <div class="phone__bar">
               <span class="phone__brand"><img src="media/logo.png" alt="" width="20" height="20" /><span>dishd<span class="brand__dot">.</span></span></span>
@@ -167,7 +158,7 @@
     <!-- About -->
     <section class="section" id="about">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
           <span class="eyebrow" data-en="What dishd is" data-pl="Czym jest dishd">What dishd is</span>
           <h2 data-en="A social cookbook without the clutter"
               data-pl="Społecznościowa książka kucharska bez zbędnego szumu">
@@ -178,42 +169,13 @@
             No endless life story before the ingredient list. Just clean recipe cards, photos from real kitchens and profiles built around food.
           </p>
         </div>
-
-        <div class="cards" id="features">
-          <article class="card reveal">
-            <span class="card__num">01</span>
-            <h3 data-en="Post your dishes" data-pl="Publikuj swoje dania">Post your dishes</h3>
-            <p data-en="Add a photo, ingredients, preparation steps and tags in seconds — enough for someone else to cook your meal."
-               data-pl="Dodaj zdjęcie, składniki, kroki przygotowania i tagi w kilka sekund — tyle, żeby ktoś inny mógł ugotować Twoje danie.">
-              Add a photo, ingredients, preparation steps and tags in seconds — enough for someone else to cook your meal.
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <span class="card__num">02</span>
-            <h3 data-en="Save &amp; organize" data-pl="Zapisuj i porządkuj">Save &amp; organize</h3>
-            <p data-en="Bookmark recipes for later and search instantly by dish name, tag or @handle — no endless scrolling needed."
-               data-pl="Zapisuj przepisy na później i wyszukuj błyskawicznie po nazwie dania, tagu lub @nicku — bez przewijania w nieskończoność.">
-              Bookmark recipes for later and search instantly by dish name, tag or @handle — no endless scrolling needed.
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <span class="card__num">03</span>
-            <h3 data-en="Follow cooks" data-pl="Obserwuj twórców">Follow cooks</h3>
-            <p data-en="Build a feed around people whose taste matches yours, with full control over privacy and blocked accounts."
-               data-pl="Zbuduj feed wokół osób, których styl gotowania Ci odpowiada, z pełną kontrolą nad prywatnością i blokowaniem kont.">
-              Build a feed around people whose taste matches yours, with full control over privacy and blocked accounts.
-            </p>
-          </article>
-        </div>
       </div>
     </section>
 
-    <!-- Brand band -->
-    <section class="section section--tight">
+    <!-- The idea -->
+    <section class="section section--tight" id="idea">
       <div class="wrap">
-        <div class="band reveal">
+        <div class="band">
           <div class="band__inner">
             <div>
               <span class="eyebrow" data-en="The idea" data-pl="Idea">The idea</span>
@@ -221,9 +183,9 @@
                   data-pl="Twoja kuchnia. Twoje zasady.">
                 Your kitchen. Your rules.
               </h2>
-              <p data-en="dishd. came from a simple need: a place for recipes that looks good, works with one hand and never gets in the way of cooking. No ads, no algorithm shouting about reach, no data sold on the side."
-                 data-pl="dishd. powstało z prostej potrzeby: miejsca na przepisy, które dobrze wygląda, działa jedną ręką i nie przeszkadza w gotowaniu. Bez reklam, bez algorytmu krzyczącego o zasięgach i bez sprzedawania danych.">
-                dishd. came from a simple need: a place for recipes that looks good, works with one hand and never gets in the way of cooking. No ads, no algorithm shouting about reach, no data sold on the side.
+              <p data-en="dishd. came from a simple need: a place for recipes that looks good, works with one hand and never gets in the way of cooking. No trackers, no algorithm shouting about reach, no data sold on the side."
+                 data-pl="dishd. powstało z prostej potrzeby: miejsca na przepisy, które dobrze wygląda, działa jedną ręką i nie przeszkadza w gotowaniu. Bez trackerów, bez algorytmu krzyczącego o zasięgach i bez sprzedawania danych.">
+                dishd. came from a simple need: a place for recipes that looks good, works with one hand and never gets in the way of cooking. No trackers, no algorithm shouting about reach, no data sold on the side.
               </p>
             </div>
             <img class="band__logo" src="media/logo.png" alt="dishd." width="200" height="200" loading="lazy" />
@@ -232,119 +194,10 @@
       </div>
     </section>
 
-    <!-- How it works -->
-    <section class="section" id="how">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow" data-en="How it works" data-pl="Jak to działa">How it works</span>
-          <h2 data-en="From your plate to the feed in three steps"
-              data-pl="Od talerza do feedu w trzech krokach">
-            From your plate to the feed in three steps
-          </h2>
-        </div>
-
-        <div class="steps">
-          <article class="step reveal">
-            <h3 data-en="Photograph the dish" data-pl="Zrób zdjęcie dania">Photograph the dish</h3>
-            <p data-en="One phone photo is enough to start a recipe card. No studio, no styling props, no filters required."
-               data-pl="Jedno zdjęcie z telefonu wystarczy, żeby zacząć kartę przepisu. Bez studia, bez rekwizytów i bez filtrów.">
-              One phone photo is enough to start a recipe card. No studio, no styling props, no filters required.
-            </p>
-          </article>
-
-          <article class="step reveal">
-            <h3 data-en="Add ingredients &amp; steps" data-pl="Dopisz składniki i kroki">Add ingredients &amp; steps</h3>
-            <p data-en="A short, concrete list with the amounts you actually used. Someone else should be able to repeat it."
-               data-pl="Krótka, konkretna lista z ilościami, których naprawdę użyłeś. Ktoś inny powinien móc to powtórzyć.">
-              A short, concrete list with the amounts you actually used. Someone else should be able to repeat it.
-            </p>
-          </article>
-
-          <article class="step reveal">
-            <h3 data-en="Publish or save for later" data-pl="Opublikuj lub zapisz na później">Publish or save for later</h3>
-            <p data-en="Your dish lands in the feed, and other people's cards are one tap away from your own collection."
-               data-pl="Twoje danie trafia do feedu, a karty innych osób są jedno kliknięcie od Twojej kolekcji.">
-              Your dish lands in the feed, and other people's cards are one tap away from your own collection.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Legal hub -->
-    <section class="section" id="legal">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow" data-en="Documents" data-pl="Dokumenty">Documents</span>
-          <h2 data-en="Everything you should know, in one place"
-              data-pl="Wszystko, co warto wiedzieć, w jednym miejscu">
-            Everything you should know, in one place
-          </h2>
-          <p data-en="The privacy policy, terms of service and GDPR information now live on their own pages — easy to read on a phone and on a desktop."
-             data-pl="Polityka prywatności, regulamin i informacje RODO mają teraz osobne strony — wygodne w czytaniu na telefonie i na komputerze.">
-            The privacy policy, terms of service and GDPR information now live on their own pages — easy to read on a phone and on a desktop.
-          </p>
-        </div>
-
-        <div class="legal-cards">
-          <a class="legal-card reveal" href="privacy.html">
-            <div class="legal-card__top">
-              <span class="legal-card__icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2.5" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>
-              </span>
-            </div>
-            <h3 data-en="Privacy Policy" data-pl="Polityka prywatności">Privacy Policy</h3>
-            <p data-en="Which data we collect, why we need it and who processes it on our behalf."
-               data-pl="Jakie dane zbieramy, po co ich potrzebujemy i komu powierzamy ich przetwarzanie.">
-              Which data we collect, why we need it and who processes it on our behalf.
-            </p>
-            <span class="legal-card__link" data-en="Read the policy <span aria-hidden=&quot;true&quot;>→</span>"
-                  data-pl="Przeczytaj politykę <span aria-hidden=&quot;true&quot;>→</span>">
-              Read the policy <span aria-hidden="true">→</span>
-            </span>
-          </a>
-
-          <a class="legal-card reveal" href="terms.html">
-            <div class="legal-card__top">
-              <span class="legal-card__icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h7.5L19 8v12.5H7z" /><path d="M14 3.5V8h5" /><path d="M10 12h6M10 15.5h6M10 19h3.5" /></svg>
-              </span>
-            </div>
-            <h3 data-en="Terms of Service" data-pl="Regulamin">Terms of Service</h3>
-            <p data-en="The rules for using the app, publishing content and keeping the community safe."
-               data-pl="Zasady korzystania z aplikacji, publikowania treści i dbania o bezpieczeństwo społeczności.">
-              The rules for using the app, publishing content and keeping the community safe.
-            </p>
-            <span class="legal-card__link" data-en="Read the terms <span aria-hidden=&quot;true&quot;>→</span>"
-                  data-pl="Przeczytaj regulamin <span aria-hidden=&quot;true&quot;>→</span>">
-              Read the terms <span aria-hidden="true">→</span>
-            </span>
-          </a>
-
-          <a class="legal-card reveal" href="gdpr.html">
-            <div class="legal-card__top">
-              <span class="legal-card__icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5v5l3 2" /></svg>
-              </span>
-            </div>
-            <h3 data-en="GDPR / RODO" data-pl="RODO">GDPR / RODO</h3>
-            <p data-en="Your rights, the legal bases for processing and how to send a data request."
-               data-pl="Twoje prawa, podstawy prawne przetwarzania i sposób zgłaszania żądań.">
-              Your rights, the legal bases for processing and how to send a data request.
-            </p>
-            <span class="legal-card__link" data-en="See your rights <span aria-hidden=&quot;true&quot;>→</span>"
-                  data-pl="Sprawdź swoje prawa <span aria-hidden=&quot;true&quot;>→</span>">
-              See your rights <span aria-hidden="true">→</span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- Contact -->
     <section class="section section--tight" id="contact">
       <div class="wrap">
-        <div class="cta reveal">
+        <div class="cta">
           <div>
             <h2 data-en="Questions, feedback or a data request?"
                 data-pl="Pytania, uwagi albo sprawa dotycząca danych?">
@@ -382,8 +235,7 @@
           <h4 data-en="Site" data-pl="Serwis">Site</h4>
           <ul>
             <li><a href="#about" data-en="The app" data-pl="Aplikacja">The app</a></li>
-            <li><a href="#features" data-en="Features" data-pl="Funkcje">Features</a></li>
-            <li><a href="#how" data-en="How it works" data-pl="Jak to działa">How it works</a></li>
+            <li><a href="#idea" data-en="Idea" data-pl="Idea">Idea</a></li>
             <li><a href="#contact" data-en="Contact" data-pl="Kontakt">Contact</a></li>
           </ul>
         </div>
