@@ -1,1 +1,627 @@
-<h> siemanko </h>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dishd. — Cook, Share &amp; Discover Recipes</title>
+  <meta name="description" content="Dishd is a social culinary app for sharing homemade recipes, saving dishes, and building your personal cookbook." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #FAF7F2;
+      --surface: #F2ECE1;
+      --card: #FFFFFF;
+      --text: #1F1D1A;
+      --muted: #645E56;
+      --accent: #C8643B;
+      --accent-soft: #F7E6DE;
+      --sage: #4B6650;
+      --sage-soft: #E5EDE6;
+      --border: #E5DEC9;
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --max-w: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Fraunces', Georgia, serif;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(250, 247, 242, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none !important;
+      letter-spacing: -0.03em;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 3px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    /* Container */
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 72px 0 56px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--sage-soft);
+      color: var(--sage);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5.5vw, 56px);
+      font-weight: 600;
+      max-width: 720px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 600px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+      text-decoration: none !important;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #FFFFFF;
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    /* Features */
+    .section {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .section h2 {
+      font-size: clamp(26px, 3.5vw, 34px);
+      margin-bottom: 14px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 36px;
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 4px 10px;
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Legal Box */
+    .legal-doc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-top: 24px;
+    }
+
+    .legal-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .legal-doc h3 {
+      font-size: 19px;
+      margin: 24px 0 8px;
+      color: var(--text);
+    }
+
+    .legal-doc h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .legal-doc p, .legal-doc li {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .legal-doc ul {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    .placeholder-pill {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px dashed var(--accent);
+      font-family: monospace;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    /* Contact strip */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .contact-box h3 {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* Footer */
+    footer {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    @media (max-width: 680px) {
+      .nav-links a {
+        display: none;
+      }
+      .hero {
+        padding: 48px 0 40px;
+      }
+      .legal-doc {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-inner">
+      <a href="#" class="brand">dishd<span>.</span></a>
+      <nav class="nav-links">
+        <a href="#about" data-en="About" data-pl="O aplikacji">About</a>
+        <a href="#privacy" data-en="Privacy Policy" data-pl="Polityka prywatności">Privacy Policy</a>
+        <a href="#terms" data-en="Terms" data-pl="Regulamin">Terms</a>
+        <a href="#contact" data-en="Contact" data-pl="Kontakt">Contact</a>
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="pl">PL</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        <span data-en="Early Stage Development • dishd.pl" data-pl="Wczesny etap rozwoju • dishd.pl">Early Stage Development • dishd.pl</span>
+      </div>
+      <h1 data-en="Real food, shared by <em>real people.</em>" data-pl="Prawdziwe jedzenie, dzielone przez <em>prawdziwych ludzi.</em>">
+        Real food, shared by <em>real people.</em>
+      </h1>
+      <p data-en="Dishd is a minimalist mobile app for documenting what you cook, discovering everyday recipes from other creators, and keeping your favorite dishes in one place."
+         data-pl="Dishd to minimalistyczna aplikacja mobilna do dzielenia się tym, co gotujesz, odkrywania codziennych przepisów innych twórców i zbierania ulubionych dań w jednym miejscu.">
+        Dishd is a minimalist mobile app for documenting what you cook, discovering everyday recipes from other creators, and keeping your favorite dishes in one place.
+      </p>
+      <div class="hero-actions">
+        <a href="#privacy" class="btn btn-primary" data-en="Privacy Policy" data-pl="Polityka prywatności">Privacy Policy</a>
+        <a href="mailto:contact@dishd.pl" class="btn btn-secondary">contact@dishd.pl</a>
+      </div>
+    </section>
+
+    <!-- About / Features -->
+    <section id="about" class="section">
+      <div class="section-label" data-en="What is Dishd" data-pl="Czym jest Dishd">What is Dishd</div>
+      <h2 data-en="A social cookbook without the clutter" data-pl="Społecznościowa książka kucharska bez zbędnego szumu">
+        A social cookbook without the clutter
+      </h2>
+      <p class="section-intro"
+         data-en="No endless life stories before the ingredients list. Just clean recipe cards, photos from real kitchens, and profiles built around food."
+         data-pl="Bez długich historii przed listą składników. Tylko czytelne karty przepisów, zdjęcia z prawdziwych kuchni i profile skupione na jedzeniu.">
+        No endless life stories before the ingredients list. Just clean recipe cards, photos from real kitchens, and profiles built around food.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <span class="card-tag">01</span>
+          <h3 data-en="Post Your Dishes" data-pl="Publikuj swoje dania">Post Your Dishes</h3>
+          <p data-en="Upload photos, ingredients, preparation steps, and tags in seconds so others can recreate your meal."
+             data-pl="Dodawaj zdjęcia, składniki, kroki przygotowania i tagi w kilka sekund, aby inni mogli odtworzyć Twoje danie.">
+            Upload photos, ingredients, preparation steps, and tags in seconds so others can recreate your meal.
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="card-tag">02</span>
+          <h3 data-en="Save &amp; Organize" data-pl="Zapisuj i organizuj">Save &amp; Organize</h3>
+          <p data-en="Bookmark recipes you want to cook later and search instantly by dish name, tags, or @username."
+             data-pl="Zapisuj przepisy na później i wyszukuj błyskawicznie po nazwie dania, tagach lub @nicku twórcy.">
+            Bookmark recipes you want to cook later and search instantly by dish name, tags, or @username.
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="card-tag">03</span>
+          <h3 data-en="Follow Creators" data-pl="Obserwuj twórców">Follow Creators</h3>
+          <p data-en="Build your feed around cooks whose taste matches yours, with full control over privacy and blocked accounts."
+             data-pl="Buduj swój feed wokół osób, których styl gotowania Ci odpowiada, z pełną kontrolą nad prywatnością i blokowaniem kont.">
+            Build your feed around cooks whose taste matches yours, with full control over privacy and blocked accounts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Policy -->
+    <section id="privacy" class="section">
+      <div class="section-label" data-en="Legal &amp; GDPR" data-pl="Informacje prawne i RODO">Legal &amp; GDPR</div>
+      <h2 data-en="Privacy Policy" data-pl="Polityka prywatności">Privacy Policy</h2>
+      <p class="section-intro"
+         data-en="Information on how personal data is processed within the Dishd mobile application and the dishd.pl website."
+         data-pl="Informacje o sposobie przetwarzania danych osobowych w aplikacji mobilnej Dishd oraz w serwisie dishd.pl.">
+        Information on how personal data is processed within the Dishd mobile application and the dishd.pl website.
+      </p>
+
+      <div class="legal-doc">
+        <div class="legal-meta">
+          <span><strong data-en="Last updated:" data-pl="Ostatnia aktualizacja:">Last updated:</strong> 19.11.2026</span>
+          <span><strong data-en="Domain:" data-pl="Domena:">Domain:</strong> dishd.pl</span>
+          <span><strong data-en="Contact:" data-pl="Kontakt:">Contact:</strong> <a href="mailto:contact@dishd.pl">contact@dishd.pl</a></span>
+        </div>
+
+        <h3 data-en="1. Data Controllers" data-pl="1. Administratorzy danych osobowych">1. Data Controllers</h3>
+        <p data-en="The joint controllers responsible for processing your personal data in connection with the Dishd application and dishd.pl website are:"
+           data-pl="Współadministratorami odpowiedzialnymi za przetwarzanie Twoich danych osobowych w związku z aplikacją Dishd oraz stroną dishd.pl są:">
+          The joint controllers responsible for processing your personal data in connection with the Dishd application and dishd.pl website are:
+        </p>
+        <p><strong>Nico Jankowiak &amp; Tomasz Musioł</strong><br />
+           <span data-en="Ruda Śląska, Poland" data-pl="Ruda Śląska, Polska">Ruda Śląska, Poland</span><br />
+           E-mail: <a href="mailto:contact@dishd.pl">contact@dishd.pl</a></p>
+
+        <h3 data-en="2. What Data We Collect" data-pl="2. Jakie dane zbieramy">2. What Data We Collect</h3>
+        <ul>
+          <li data-en="Account &amp; authentication data: email address, username (@handle), encrypted password or Google OAuth identifier, and two-factor authentication settings."
+              data-pl="Dane konta i uwierzytelniania: adres e-mail, nazwa użytkownika (@nick), zaszyfrowane hasło lub identyfikator logowania Google OAuth oraz ustawienia weryfikacji dwuetapowej.">
+            Account &amp; authentication data: email address, username (@handle), encrypted password or Google OAuth identifier, and two-factor authentication settings.
+          </li>
+          <li data-en="Profile &amp; user-generated content: avatar photo, bio, selected profile banner, published recipes, food photos, tags, likes, saved recipes, and follow/block relationships."
+              data-pl="Dane profilu i treści użytkownika: zdjęcie profilowe (avatar), opis (bio), wybrane tło profilu, publikowane przepisy, zdjęcia potraw, tagi, polubienia, zapisane przepisy oraz relacje obserwowania i blokowania.">
+            Profile &amp; user-generated content: avatar photo, bio, selected profile banner, published recipes, food photos, tags, likes, saved recipes, and follow/block relationships.
+          </li>
+          <li data-en="Support communications: messages and email addresses provided when contacting us at contact@dishd.pl."
+              data-pl="Korespondencja: treść wiadomości oraz adres e-mail podany podczas kontaktu na adres contact@dishd.pl.">
+            Support communications: messages and email addresses provided when contacting us at contact@dishd.pl.
+          </li>
+        </ul>
+
+        <h3 data-en="3. Purpose and Legal Basis (GDPR)" data-pl="3. Cel i podstawa prawna przetwarzania (RODO)">3. Purpose and Legal Basis (GDPR)</h3>
+        <ul>
+          <li data-en="Providing app functionality, account creation, and recipe publishing — Article 6(1)(b) GDPR (performance of a contract / service)."
+              data-pl="Świadczenie usług aplikacji, założenie konta i publikacja przepisów — art. 6 ust. 1 lit. b RODO (niezbędność do wykonania umowy/usługi).">
+            Providing app functionality, account creation, and recipe publishing — Article 6(1)(b) GDPR (performance of a contract / service).
+          </li>
+          <li data-en="Account security, verification codes, and abuse prevention — Article 6(1)(f) GDPR (legitimate interest of the controllers)."
+              data-pl="Bezpieczeństwo konta, wysyłka kodów weryfikacyjnych oraz zapobieganie nadużyciom — art. 6 ust. 1 lit. f RODO (prawnie uzasadniony interes administratorów).">
+            Account security, verification codes, and abuse prevention — Article 6(1)(f) GDPR (legitimate interest of the controllers).
+          </li>
+        </ul>
+
+        <h3 data-en="4. External Tools &amp; Third-Party Services" data-pl="4. Dodatkowe narzędzia i usługi zewnętrzne">4. External Tools &amp; Third-Party Services</h3>
+        <p data-en="Dishd is currently in early-stage development. The detailed list of third-party infrastructure providers and analytical tools is currently:"
+           data-pl="Aplikacja Dishd znajduje się obecnie na wczesnym etapie rozwoju (early-stage development). Szczegółowa lista zewnętrznych dostawców infrastruktury oraz narzędzi analitycznych jest obecnie:">
+          Dishd is currently in early-stage development. The detailed list of third-party infrastructure providers and analytical tools is currently:
+        </p>
+        <p><span class="placeholder-pill">DO WYPEŁNIENIA</span></p>
+
+        <h3 data-en="5. Your Rights &amp; Account Deletion" data-pl="5. Twoje prawa i usunięcie konta">5. Your Rights &amp; Account Deletion</h3>
+        <p data-en="Under the GDPR, you have the right to access your personal data, rectify it, request its erasure ('right to be forgotten'), restrict processing, transfer your data, and lodge a complaint with the President of the Personal Data Protection Office (UODO) in Poland. To delete your account and all associated recipes/data, contact us anytime at contact@dishd.pl."
+           data-pl="Zgodnie z RODO masz prawo dostępu do swoich danych, ich sprostowania, żądania ich usunięcia („prawo do bycia zapomnianym”), ograniczenia przetwarzania, przenoszenia danych oraz wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (UODO). Aby usunąć konto oraz wszystkie powiązane z nim przepisy i dane, napisz do nas w dowolnym momencie na adres contact@dishd.pl.">
+          Under the GDPR, you have the right to access your personal data, rectify it, request its erasure ('right to be forgotten'), restrict processing, transfer your data, and lodge a complaint with the President of the Personal Data Protection Office (UODO) in Poland. To delete your account and all associated recipes/data, contact us anytime at contact@dishd.pl.
+        </p>
+      </div>
+    </section>
+
+    <!-- Terms of Service -->
+    <section id="terms" class="section">
+      <div class="section-label" data-en="Rules" data-pl="Zasady korzystania">Rules</div>
+      <h2 data-en="Terms of Service" data-pl="Regulamin">Terms of Service</h2>
+
+      <div class="legal-doc">
+        <h3 data-en="1. General Information" data-pl="1. Postanowienia ogólne">1. General Information</h3>
+        <p data-en="Dishd is a community platform operated by Nico Jankowiak &amp; Tomasz Musioł (Ruda Śląska, Poland). By creating an account or using the app, you agree to these basic terms."
+           data-pl="Dishd to platforma społecznościowa prowadzona przez Nico Jankowiaka oraz Tomasza Musioła (Ruda Śląska, Polska). Zakładając konto lub korzystając z aplikacji, akceptujesz niniejsze zasady.">
+          Dishd is a community platform operated by Nico Jankowiak &amp; Tomasz Musioł (Ruda Śląska, Poland). By creating an account or using the app, you agree to these basic terms.
+        </p>
+
+        <h3 data-en="2. User Content" data-pl="2. Treści użytkowników">2. User Content</h3>
+        <p data-en="You retain ownership of the recipes and photos you upload. By publishing content publicly in Dishd, you grant us a non-exclusive license to display it within the app to other users. Do not upload copyrighted material you do not own, spam, or offensive content."
+           data-pl="Zachowujesz prawa autorskie do dodawanych przez siebie przepisów i zdjęć. Publikując treści publicznie w Dishd, udzielasz nam niewyłącznej licencji na ich wyświetlanie innym użytkownikom w ramach aplikacji. Zabrania się publikowania treści naruszających prawa autorskie osób trzecich, spamu oraz treści obraźliwych.">
+          You retain ownership of the recipes and photos you upload. By publishing content publicly in Dishd, you grant us a non-exclusive license to display it within the app to other users. Do not upload copyrighted material you do not own, spam, or offensive content.
+        </p>
+
+        <h3 data-en="3. Early Development Disclaimer" data-pl="3. Wczesna wersja aplikacji">3. Early Development Disclaimer</h3>
+        <p data-en="Dishd is actively developed and features may change over time. We reserve the right to moderate content or suspend accounts that violate community safety."
+           data-pl="Dishd jest aktywnie rozwijany, a jego funkcje mogą ulegać zmianom. Zastrzegamy sobie prawo do moderacji treści lub zawieszenia kont naruszających bezpieczeństwo społeczności.">
+          Dishd is actively developed and features may change over time. We reserve the right to moderate content or suspend accounts that violate community safety.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section" style="border-bottom: none;">
+      <div class="contact-box">
+        <div>
+          <h3 data-en="Questions, feedback, or data requests?" data-pl="Pytania, uwagi lub sprawy dotyczące danych?">
+            Questions, feedback, or data requests?
+          </h3>
+          <p data-en="Reach out directly to the Dishd team — we respond to all inquiries."
+             data-pl="Napisz bezpośrednio do zespołu Dishd — odpowiadamy na wszystkie wiadomości.">
+            Reach out directly to the Dishd team — we respond to all inquiries.
+          </p>
+        </div>
+        <a href="mailto:contact@dishd.pl" class="btn btn-primary">contact@dishd.pl</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2026 <strong>dishd.</strong> — Nico Jankowiak &amp; Tomasz Musioł (Ruda Śląska, Poland)</div>
+    <div class="footer-links">
+      <a href="#privacy" data-en="Privacy Policy" data-pl="Polityka prywatności">Privacy Policy</a>
+      <a href="#terms" data-en="Terms" data-pl="Regulamin">Terms</a>
+      <a href="mailto:contact@dishd.pl">contact@dishd.pl</a>
+    </div>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.lang-btn');
+    const translatable = document.querySelectorAll('[data-en][data-pl]');
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      translatable.forEach((el) => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+      });
+      buttons.forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+      try {
+        localStorage.setItem('dishd_lang', lang);
+      } catch (e) {}
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    try {
+      const saved = localStorage.getItem('dishd_lang');
+      if (saved === 'pl' || saved === 'en') {
+        setLanguage(saved);
+      }
+    } catch (e) {}
+  </script>
+</body>
+</html>
