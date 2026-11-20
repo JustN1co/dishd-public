@@ -19,9 +19,7 @@
   <meta property="og:description" content="Rules for using Dishd: accounts, content, community standards and the culinary disclaimer." />
   <meta property="og:image" content="https://dishd.pl/media/og-cover.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/fonts.css" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
@@ -40,14 +38,18 @@
 
       <div class="header-actions">
         <div class="lang-switch" role="group" aria-label="Language / Język">
-          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" class="lang-btn" data-lang="pl" aria-pressed="false">PL</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true"
+                  aria-label="Switch language to English (EN)"
+                  data-aria-en="Switch language to English (EN)" data-aria-pl="Zmień język na angielski (EN)">EN</button>
+          <button type="button" class="lang-btn" data-lang="pl" aria-pressed="false"
+                  aria-label="Switch language to Polish (PL)"
+                  data-aria-en="Switch language to Polish (PL)" data-aria-pl="Zmień język na polski (PL)">PL</button>
         </div>
       </div>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="doc-hero">
       <div class="wrap">
         <a class="doc-hero__back" href="index.html">
@@ -62,8 +64,8 @@
         </p>
 
         <div class="doc-meta">
-          <span><strong data-en="Last updated:" data-pl="Ostatnia aktualizacja:">Last updated:</strong> <span data-en="19 November 2026" data-pl="19 listopada 2026">19 November 2026</span></span>
-          <span><strong data-en="Version:" data-pl="Wersja:">Version:</strong> 2.0</span>
+          <span><strong data-en="Last updated:" data-pl="Ostatnia aktualizacja:">Last updated:</strong> <span data-en="20 November 2026" data-pl="20 listopada 2026">20 November 2026</span></span>
+          <span><strong data-en="Version:" data-pl="Wersja:">Version:</strong> 2.1</span>
           <span><strong data-en="Contact:" data-pl="Kontakt:">Contact:</strong> <a href="mailto:contact@dishd.pl">contact@dishd.pl</a></span>
         </div>
       </div>
@@ -82,6 +84,7 @@
           <li><a href="#ip" data-en="Our intellectual property" data-pl="Nasza własność intelektualna">Our intellectual property</a></li>
           <li><a href="#termination" data-en="Deleting your account" data-pl="Usunięcie konta">Deleting your account</a></li>
           <li><a href="#liability" data-en="Liability" data-pl="Odpowiedzialność">Liability</a></li>
+          <li><a href="#refunds" data-en="Payments, refunds &amp; complaints" data-pl="Płatności, zwroty i reklamacje">Payments, refunds &amp; complaints</a></li>
           <li><a href="#final" data-en="Final provisions" data-pl="Postanowienia końcowe">Final provisions</a></li>
         </ol>
       </nav>
@@ -260,8 +263,38 @@
           </p>
         </section>
 
+        <section id="refunds">
+          <h2 data-en="10. Payments, refunds and complaints" data-pl="10. Płatności, zwroty i reklamacje">10. Payments, refunds and complaints</h2>
+          <p data-en="<strong>Dishd is free today.</strong> There is no subscription, no paid plan and no in-app purchase, so nothing can be bought on dishd.pl or in the app, and we collect no payment data."
+             data-pl="<strong>Dishd jest dziś bezpłatne.</strong> Nie ma abonamentu, planu płatnego ani zakupów w aplikacji, więc w serwisie dishd.pl i w aplikacji nie można nic kupić, a my nie zbieramy danych płatniczych.">
+            <strong>Dishd is free today.</strong> There is no subscription, no paid plan and no in-app purchase, so nothing can be bought on dishd.pl or in the app, and we collect no payment data.
+          </p>
+          <p data-en="If we introduce paid features, we will show the price in PLN or EUR including VAT, say exactly what the price covers and for how long, and take your explicit agreement before charging. We will never start charging for something you already use without asking you first."
+             data-pl="Jeśli wprowadzimy funkcje płatne, pokażemy cenę w złotych lub euro z VAT, dokładnie powiemy, co obejmuje i na jak długo, i poprosimy o wyraźną zgodę przed pobraniem opłaty. Nigdy nie zaczniemy pobierać opłat za coś, czego już używasz, bez uprzedniej zgody.">
+            If we introduce paid features, we will show the price in PLN or EUR including VAT, say exactly what the price covers and for how long, and take your explicit agreement before charging. We will never start charging for something you already use without asking you first.
+          </p>
+          <h3 data-en="Refunds and the right to withdraw" data-pl="Zwroty i prawo odstąpienia">Refunds and the right to withdraw</h3>
+          <p data-en="For paid digital content, consumers in the European Union have 14 days to withdraw from the contract without giving a reason. If you ask us to start delivering immediately, you will be asked to confirm that you understand the right of withdrawal ends once delivery begins; if you do not agree, the paid content starts after those 14 days."
+             data-pl="W przypadku płatnych treści cyfrowych konsumentom w Unii Europejskiej przysługuje 14 dni na odstąpienie od umowy bez podania przyczyny. Jeśli poprosisz o natychmiastowe rozpoczęcie dostarczania, potwierdzisz, że wiesz, iż prawo odstąpienia wygasa po rozpoczęciu dostarczania; jeśli się nie zgodzisz, płatny dostęp zacznie się po tych 14 dniach.">
+            For paid digital content, consumers in the European Union have 14 days to withdraw from the contract without giving a reason. If you ask us to start delivering immediately, you will be asked to confirm that you understand the right of withdrawal ends once delivery begins; if you do not agree, the paid content starts after those 14 days.
+          </p>
+          <p data-en="If a paid feature does not work as described, write to contact@dishd.pl within 14 days of noticing the problem. We will repair it, deliver it again or refund it — whichever the law gives you as a consumer. A refund goes back through the same payment method within 14 days of accepting your claim."
+             data-pl="Jeśli płatna funkcja nie działa tak, jak opisaliśmy, napisz na contact@dishd.pl w ciągu 14 dni od zauważenia problemu. Naprawimy ją, dostarczymy ponownie lub zwrócimy opłatę — zgodnie z tym, co daje Ci prawo jako konsumentowi. Zwrot trafia tą samą metodą płatności w ciągu 14 dni od uznania reklamacji.">
+            If a paid feature does not work as described, write to contact@dishd.pl within 14 days of noticing the problem. We will repair it, deliver it again or refund it — whichever the law gives you as a consumer. A refund goes back through the same payment method within 14 days of accepting your claim.
+          </p>
+          <h3 data-en="Complaints" data-pl="Reklamacje">Complaints</h3>
+          <p data-en="Complaints about the service can be sent to contact@dishd.pl in Polish or English. We answer within 14 days of receiving them; if we need longer, we will say why and when to expect the answer. Filing a complaint does not stop you from using Dishd or from going to a consumer ombudsman or a court."
+             data-pl="Reklamacje dotyczące usługi możesz wysłać na contact@dishd.pl w języku polskim lub angielskim. Odpowiadamy w ciągu 14 dni od ich otrzymania; jeśli potrzebujemy więcej czasu, wyjaśnimy dlaczego i kiedy odpowiemy. Złożenie reklamacji nie blokuje korzystania z Dishd ani drogi do rzecznika konsumentów czy sądu.">
+            Complaints about the service can be sent to contact@dishd.pl in Polish or English. We answer within 14 days of receiving them; if we need longer, we will say why and when to expect the answer. Filing a complaint does not stop you from using Dishd or from going to a consumer ombudsman or a court.
+          </p>
+          <p data-en="These rules apply on top of your statutory rights. Nothing in these terms reduces the rights you have as a consumer under Polish and EU law."
+             data-pl="Zasady te obowiązują dodatkowo obok Twoich ustawowych praw. Nic w regulaminie nie ogranicza praw, które masz jako konsument na podstawie prawa polskiego i unijnego.">
+            These rules apply on top of your statutory rights. Nothing in these terms reduces the rights you have as a consumer under Polish and EU law.
+          </p>
+        </section>
+
         <section id="final">
-          <h2 data-en="10. Final provisions" data-pl="10. Postanowienia końcowe">10. Final provisions</h2>
+          <h2 data-en="11. Final provisions" data-pl="11. Postanowienia końcowe">11. Final provisions</h2>
           <p data-en="We may update these terms when the app changes. Material changes are announced in the app and on this page at least 14 days before they take effect, and continuing to use Dishd after that date means you accept them. If you do not accept a change, you can stop using the app and delete your account."
              data-pl="Możemy aktualizować regulamin wraz ze zmianami aplikacji. O istotnych zmianach informujemy w aplikacji oraz na tej stronie co najmniej 14 dni przed ich wejściem w życie, a dalsze korzystanie z Dishd po tej dacie oznacza ich akceptację. Jeśli nie akceptujesz zmiany, możesz przestać korzystać z aplikacji i usunąć konto.">
             We may update these terms when the app changes. Material changes are announced in the app and on this page at least 14 days before they take effect, and continuing to use Dishd after that date means you accept them. If you do not accept a change, you can stop using the app and delete your account.
@@ -300,7 +333,7 @@
         </div>
 
         <div class="footer-col">
-          <h4 data-en="Site" data-pl="Serwis">Site</h4>
+          <h2 data-en="Site" data-pl="Serwis">Site</h2>
           <ul>
             <li><a href="index.html#about" data-en="The app" data-pl="Aplikacja">The app</a></li>
             <li><a href="index.html#idea" data-en="Idea" data-pl="Idea">Idea</a></li>
@@ -309,16 +342,18 @@
         </div>
 
         <div class="footer-col">
-          <h4 data-en="Documents" data-pl="Dokumenty">Documents</h4>
+          <h2 data-en="Documents" data-pl="Dokumenty">Documents</h2>
           <ul>
             <li><a href="privacy.html" data-en="Privacy Policy" data-pl="Polityka prywatności">Privacy Policy</a></li>
             <li><a href="terms.html" data-en="Terms of Service" data-pl="Regulamin">Terms of Service</a></li>
+            <li><a href="terms.html#refunds" data-en="Payments &amp; refunds" data-pl="Płatności i zwroty">Payments &amp; refunds</a></li>
+            <li><a href="privacy.html#cookies" data-en="Cookies" data-pl="Cookies">Cookies</a></li>
             <li><a href="gdpr.html" data-en="GDPR / RODO" data-pl="RODO">GDPR / RODO</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4 data-en="Contact" data-pl="Kontakt">Contact</h4>
+          <h2 data-en="Contact" data-pl="Kontakt">Contact</h2>
           <ul>
             <li><a href="mailto:contact@dishd.pl">contact@dishd.pl</a></li>
             <li><span data-en="Nico Jankowiak &amp; Tomasz Musioł" data-pl="Nico Jankowiak i Tomasz Musioł">Nico Jankowiak &amp; Tomasz Musioł</span></li>

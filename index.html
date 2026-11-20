@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dishd. — Cook, Share, Discover</title>
+  <title>dishd. — Cook, Share &amp; Discover Recipes</title>
   <meta name="description" content="Dishd is a minimalist social cookbook for sharing homemade recipes, saving dishes and building your personal kitchen library." />
   <meta name="theme-color" content="#FAF7F2" />
 
@@ -19,9 +19,7 @@
   <meta property="og:image" content="https://dishd.pl/media/og-cover.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/fonts.css" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
@@ -40,14 +38,18 @@
 
       <div class="header-actions">
         <div class="lang-switch" role="group" aria-label="Language / Język">
-          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" class="lang-btn" data-lang="pl" aria-pressed="false">PL</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true"
+                  aria-label="Switch language to English (EN)"
+                  data-aria-en="Switch language to English (EN)" data-aria-pl="Zmień język na angielski (EN)">EN</button>
+          <button type="button" class="lang-btn" data-lang="pl" aria-pressed="false"
+                  aria-label="Switch language to Polish (PL)"
+                  data-aria-en="Switch language to Polish (PL)" data-aria-pl="Zmień język na polski (PL)">PL</button>
         </div>
       </div>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <!-- Hero -->
     <section class="hero">
       <div class="wrap hero__grid">
@@ -69,7 +71,9 @@
 
           <div class="hero__actions">
             <a class="btn" href="#idea" data-en="See the idea" data-pl="Poznaj ideę">See the idea</a>
-            <a class="btn btn--ghost" href="mailto:contact@dishd.pl">contact@dishd.pl</a>
+            <a class="btn btn--ghost" href="mailto:contact@dishd.pl"
+               aria-label="Email us at contact@dishd.pl"
+               data-aria-en="Email us at contact@dishd.pl" data-aria-pl="Napisz do nas: contact@dishd.pl">contact@dishd.pl</a>
           </div>
 
           <div class="hero__meta">
@@ -85,7 +89,10 @@
         </div>
 
         <div class="showcase">
-          <aside class="phone" aria-label="Dishd recipe card preview" data-aria-en="Dishd recipe card preview" data-aria-pl="Podgląd karty przepisu w Dishd">
+          <div class="phone" role="img"
+               aria-label="Illustrative preview of a Dishd recipe card with sample content"
+               data-aria-en="Illustrative preview of a Dishd recipe card with sample content"
+               data-aria-pl="Poglądowy podgląd karty przepisu w Dishd z przykładową treścią">
             <div class="phone__bar">
               <span class="phone__brand"><img src="media/logo.png" alt="" width="20" height="20" /><span>dishd<span class="brand__dot">.</span></span></span>
               <span class="chip" data-en="Following feed" data-pl="Obserwowani">Following feed</span>
@@ -139,7 +146,10 @@
               </span>
               <span class="chip chip--green" data-en="✓ Saved" data-pl="✓ Zapisano">✓ Saved</span>
             </div>
-          </aside>
+          </div>
+          <p class="showcase__note" data-en="Illustrative preview — sample content, not a real user." data-pl="Poglądowy podgląd — przykładowa treść, nie prawdziwy użytkownik.">
+            Illustrative preview — sample content, not a real user.
+          </p>
         </div>
       </div>
     </section>
@@ -202,7 +212,7 @@
         </div>
 
         <div class="footer-col">
-          <h4 data-en="Site" data-pl="Serwis">Site</h4>
+          <h2 data-en="Site" data-pl="Serwis">Site</h2>
           <ul>
             <li><a href="#about" data-en="The app" data-pl="Aplikacja">The app</a></li>
             <li><a href="#idea" data-en="Idea" data-pl="Idea">Idea</a></li>
@@ -211,16 +221,18 @@
         </div>
 
         <div class="footer-col">
-          <h4 data-en="Documents" data-pl="Dokumenty">Documents</h4>
+          <h2 data-en="Documents" data-pl="Dokumenty">Documents</h2>
           <ul>
             <li><a href="privacy.html" data-en="Privacy Policy" data-pl="Polityka prywatności">Privacy Policy</a></li>
             <li><a href="terms.html" data-en="Terms of Service" data-pl="Regulamin">Terms of Service</a></li>
+            <li><a href="terms.html#refunds" data-en="Payments &amp; refunds" data-pl="Płatności i zwroty">Payments &amp; refunds</a></li>
+            <li><a href="privacy.html#cookies" data-en="Cookies" data-pl="Cookies">Cookies</a></li>
             <li><a href="gdpr.html" data-en="GDPR / RODO" data-pl="RODO">GDPR / RODO</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4 data-en="Contact" data-pl="Kontakt">Contact</h4>
+          <h2 data-en="Contact" data-pl="Kontakt">Contact</h2>
           <ul>
             <li><a href="mailto:contact@dishd.pl">contact@dishd.pl</a></li>
             <li><span data-en="Nico Jankowiak &amp; Tomasz Musioł" data-pl="Nico Jankowiak i Tomasz Musioł">Nico Jankowiak &amp; Tomasz Musioł</span></li>

@@ -19,9 +19,7 @@
   <meta property="og:description" content="What data dishd collects, why we need it and who processes it on our behalf." />
   <meta property="og:image" content="https://dishd.pl/media/og-cover.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/fonts.css" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
@@ -40,14 +38,18 @@
 
       <div class="header-actions">
         <div class="lang-switch" role="group" aria-label="Language / Język">
-          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" class="lang-btn" data-lang="pl" aria-pressed="false">PL</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true"
+                  aria-label="Switch language to English (EN)"
+                  data-aria-en="Switch language to English (EN)" data-aria-pl="Zmień język na angielski (EN)">EN</button>
+          <button type="button" class="lang-btn" data-lang="pl" aria-pressed="false"
+                  aria-label="Switch language to Polish (PL)"
+                  data-aria-en="Switch language to Polish (PL)" data-aria-pl="Zmień język na polski (PL)">PL</button>
         </div>
       </div>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="doc-hero">
       <div class="wrap">
         <a class="doc-hero__back" href="index.html">
@@ -62,8 +64,8 @@
         </p>
 
         <div class="doc-meta">
-          <span><strong data-en="Last updated:" data-pl="Ostatnia aktualizacja:">Last updated:</strong> <span data-en="19 November 2026" data-pl="19 listopada 2026">19 November 2026</span></span>
-          <span><strong data-en="Version:" data-pl="Wersja:">Version:</strong> 2.0</span>
+          <span><strong data-en="Last updated:" data-pl="Ostatnia aktualizacja:">Last updated:</strong> <span data-en="20 November 2026" data-pl="20 listopada 2026">20 November 2026</span></span>
+          <span><strong data-en="Version:" data-pl="Wersja:">Version:</strong> 2.1</span>
           <span><strong data-en="Contact:" data-pl="Kontakt:">Contact:</strong> <a href="mailto:contact@dishd.pl">contact@dishd.pl</a></span>
         </div>
       </div>
@@ -78,7 +80,7 @@
           <li><a href="#purposes" data-en="Purposes &amp; legal bases" data-pl="Cele i podstawy prawne">Purposes &amp; legal bases</a></li>
           <li><a href="#recipients" data-en="Who receives data" data-pl="Odbiorcy danych">Who receives data</a></li>
           <li><a href="#retention" data-en="How long we keep it" data-pl="Okres przechowywania">How long we keep it</a></li>
-          <li><a href="#cookies" data-en="Cookies &amp; local storage" data-pl="Cookies i pamięć lokalna">Cookies &amp; local storage</a></li>
+          <li><a href="#cookies" data-en="Cookies &amp; external requests" data-pl="Cookies i żądania zewnętrzne">Cookies &amp; external requests</a></li>
           <li><a href="#security" data-en="Security" data-pl="Bezpieczeństwo">Security</a></li>
           <li><a href="#rights" data-en="Your rights" data-pl="Twoje prawa">Your rights</a></li>
           <li><a href="#changes" data-en="Changes to this policy" data-pl="Zmiany polityki">Changes to this policy</a></li>
@@ -171,9 +173,9 @@
                 data-pl="<strong>Supabase Inc.</strong> — baza danych, uwierzytelnianie oraz przechowywanie avatarów i zdjęć przepisów.">
               <strong>Supabase Inc.</strong> — database, authentication and file storage for avatars and recipe photos.
             </li>
-            <li data-en="<strong>Google LLC</strong> — only if you choose to sign in with Google (Google OAuth 2.0). We receive your e-mail address, display name and avatar, which is the minimum needed to create and authenticate the account. Google Fonts also serves the typefaces used on dishd.pl (see section 6)."
-                data-pl="<strong>Google LLC</strong> — wyłącznie jeśli zdecydujesz się na logowanie kontem Google (Google OAuth 2.0). Otrzymujemy adres e-mail, nazwę wyświetlaną i avatar, czyli minimum potrzebne do utworzenia i uwierzytelnienia konta. Google dostarcza również kroje pisma używane na dishd.pl (patrz sekcja 6).">
-              <strong>Google LLC</strong> — only if you choose to sign in with Google (Google OAuth 2.0). We receive your e-mail address, display name and avatar, which is the minimum needed to create and authenticate the account. Google Fonts also serves the typefaces used on dishd.pl (see section 6).
+            <li data-en="<strong>Google LLC</strong> — only if you choose to sign in with Google (Google OAuth 2.0). We receive your e-mail address, display name and avatar, which is the minimum needed to create and authenticate the account."
+                data-pl="<strong>Google LLC</strong> — wyłącznie jeśli zdecydujesz się na logowanie kontem Google (Google OAuth 2.0). Otrzymujemy adres e-mail, nazwę wyświetlaną i avatar, czyli minimum potrzebne do utworzenia i uwierzytelnienia konta.">
+              <strong>Google LLC</strong> — only if you choose to sign in with Google (Google OAuth 2.0). We receive your e-mail address, display name and avatar, which is the minimum needed to create and authenticate the account.
             </li>
             <li data-en="<strong>Hosting and transactional e-mail providers</strong> — the infrastructure that serves dishd.pl and delivers verification and two-step codes."
                 data-pl="<strong>Dostawcy hostingu i poczty transakcyjnej</strong> — infrastruktura obsługująca dishd.pl oraz dostarczająca wiadomości weryfikacyjne i kody dwuetapowe.">
@@ -210,18 +212,18 @@
         </section>
 
         <section id="cookies">
-          <h2 data-en="6. Cookies, local storage and third-party files" data-pl="6. Cookies, pamięć lokalna i pliki zewnętrzne">6. Cookies, local storage and third-party files</h2>
-          <p data-en="The dishd.pl website does not use tracking cookies, and there is no consent banner because there is nothing to consent to. The only thing stored in your browser is a technical key, <code>dishd_lang</code>, in local storage — it remembers whether you chose English or Polish."
-             data-pl="Serwis dishd.pl nie używa plików cookies śledzących i dlatego nie wyświetla banera zgody — nie ma na co wyrażać zgody. W przeglądarce zapisujemy wyłącznie techniczny klucz <code>dishd_lang</code> w pamięci lokalnej, który pamięta wybór języka angielskiego lub polskiego.">
-            The dishd.pl website does not use tracking cookies, and there is no consent banner because there is nothing to consent to. The only thing stored in your browser is a technical key, <code>dishd_lang</code>, in local storage — it remembers whether you chose English or Polish.
+          <h2 data-en="6. Cookies, local storage and external requests" data-pl="6. Cookies, pamięć lokalna i żądania zewnętrzne">6. Cookies, local storage and external requests</h2>
+          <p data-en="The dishd.pl website sets no cookies at all — neither our own nor third-party — and loads no third-party embeds. The typefaces are served from dishd.pl itself, so opening a page sends no request to an external font, analytics, advertising or social service. That is why there is no consent banner: there is nothing to consent to."
+             data-pl="Serwis dishd.pl nie zapisuje żadnych plików cookies — ani własnych, ani podmiotów trzecich — i nie osadza treści zewnętrznych. Kroje pisma serwujemy z samego dishd.pl, więc otwarcie strony nie wysyła żadnego żądania do zewnętrznego serwisu czcionek, analityki, reklamy ani mediów społecznościowych. Dlatego nie ma banera zgody — nie ma na co wyrażać zgody.">
+            The dishd.pl website sets no cookies at all — neither our own nor third-party — and loads no third-party embeds. The typefaces are served from dishd.pl itself, so opening a page sends no request to an external font, analytics, advertising or social service. That is why there is no consent banner: there is nothing to consent to.
           </p>
-          <p data-en="You can remove it at any time through your browser's site data settings; the site will then fall back to English."
-             data-pl="Możesz go usunąć w każdej chwili w ustawieniach danych witryny w przeglądarce — strona wróci wtedy do wersji angielskiej.">
-            You can remove it at any time through your browser's site data settings; the site will then fall back to English.
+          <p data-en="The only thing stored in your browser is a technical key, <code>dishd_lang</code>, in local storage — it remembers whether you chose English or Polish. It holds a two-letter language code, never leaves your device and is not used to recognise you. You can remove it at any time through your browser's site data settings; the site will then fall back to English."
+             data-pl="W przeglądarce zapisujemy wyłącznie techniczny klucz <code>dishd_lang</code> w pamięci lokalnej, który pamięta wybór języka angielskiego lub polskiego. Zawiera on dwuliterowy kod języka, nigdy nie opuszcza Twojego urządzenia i nie służy do rozpoznawania Cię. Możesz go usunąć w każdej chwili w ustawieniach danych witryny w przeglądarce — strona wróci wtedy do wersji angielskiej.">
+            The only thing stored in your browser is a technical key, <code>dishd_lang</code>, in local storage — it remembers whether you chose English or Polish. It holds a two-letter language code, never leaves your device and is not used to recognise you. You can remove it at any time through your browser's site data settings; the site will then fall back to English.
           </p>
-          <p data-en="One external file is loaded: the Fraunces and Plus Jakarta Sans typefaces come from Google Fonts. When your browser fetches them, Google receives your IP address and basic request data. If you prefer to avoid this, block fonts.googleapis.com in your browser — the site stays fully readable with system fonts."
-             data-pl="Ładowany jest jeden plik zewnętrzny: kroje pisma Fraunces i Plus Jakarta Sans pochodzą z Google Fonts. Gdy przeglądarka je pobiera, Google otrzymuje Twój adres IP i podstawowe dane żądania. Jeśli wolisz tego uniknąć, zablokuj fonts.googleapis.com — strona pozostanie w pełni czytelna dzięki czcionkom systemowym.">
-            One external file is loaded: the Fraunces and Plus Jakarta Sans typefaces come from Google Fonts. When your browser fetches them, Google receives your IP address and basic request data. If you prefer to avoid this, block fonts.googleapis.com in your browser — the site stays fully readable with system fonts.
+          <p data-en="The website has no contact form, no newsletter signup and no login, so it asks for no consent and collects no data of its own. Messages sent to contact@dishd.pl go through your own e-mail application, and we process only your address and what you choose to write (sections 2 and 5)."
+             data-pl="Strona nie ma formularza kontaktowego, zapisu do newslettera ani logowania, więc nie prosi o zgodę i nie zbiera własnych danych. Wiadomości na contact@dishd.pl wysyłasz z własnej aplikacji pocztowej, a my przetwarzamy wyłącznie Twój adres i treść, którą zdecydujesz się napisać (sekcje 2 i 5).">
+            The website has no contact form, no newsletter signup and no login, so it asks for no consent and collects no data of its own. Messages sent to contact@dishd.pl go through your own e-mail application, and we process only your address and what you choose to write (sections 2 and 5).
           </p>
         </section>
 
@@ -284,7 +286,7 @@
         </div>
 
         <div class="footer-col">
-          <h4 data-en="Site" data-pl="Serwis">Site</h4>
+          <h2 data-en="Site" data-pl="Serwis">Site</h2>
           <ul>
             <li><a href="index.html#about" data-en="The app" data-pl="Aplikacja">The app</a></li>
             <li><a href="index.html#idea" data-en="Idea" data-pl="Idea">Idea</a></li>
@@ -293,16 +295,18 @@
         </div>
 
         <div class="footer-col">
-          <h4 data-en="Documents" data-pl="Dokumenty">Documents</h4>
+          <h2 data-en="Documents" data-pl="Dokumenty">Documents</h2>
           <ul>
             <li><a href="privacy.html" data-en="Privacy Policy" data-pl="Polityka prywatności">Privacy Policy</a></li>
             <li><a href="terms.html" data-en="Terms of Service" data-pl="Regulamin">Terms of Service</a></li>
+            <li><a href="terms.html#refunds" data-en="Payments &amp; refunds" data-pl="Płatności i zwroty">Payments &amp; refunds</a></li>
+            <li><a href="privacy.html#cookies" data-en="Cookies" data-pl="Cookies">Cookies</a></li>
             <li><a href="gdpr.html" data-en="GDPR / RODO" data-pl="RODO">GDPR / RODO</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4 data-en="Contact" data-pl="Kontakt">Contact</h4>
+          <h2 data-en="Contact" data-pl="Kontakt">Contact</h2>
           <ul>
             <li><a href="mailto:contact@dishd.pl">contact@dishd.pl</a></li>
             <li><span data-en="Nico Jankowiak &amp; Tomasz Musioł" data-pl="Nico Jankowiak i Tomasz Musioł">Nico Jankowiak &amp; Tomasz Musioł</span></li>

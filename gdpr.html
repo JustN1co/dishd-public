@@ -19,9 +19,7 @@
   <meta property="og:description" content="Your data protection rights at dishd and how to exercise them." />
   <meta property="og:image" content="https://dishd.pl/media/og-cover.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/fonts.css" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
@@ -40,14 +38,18 @@
 
       <div class="header-actions">
         <div class="lang-switch" role="group" aria-label="Language / Język">
-          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" class="lang-btn" data-lang="pl" aria-pressed="false">PL</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="true"
+                  aria-label="Switch language to English (EN)"
+                  data-aria-en="Switch language to English (EN)" data-aria-pl="Zmień język na angielski (EN)">EN</button>
+          <button type="button" class="lang-btn" data-lang="pl" aria-pressed="false"
+                  aria-label="Switch language to Polish (PL)"
+                  data-aria-en="Switch language to Polish (PL)" data-aria-pl="Zmień język na polski (PL)">PL</button>
         </div>
       </div>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="doc-hero">
       <div class="wrap">
         <a class="doc-hero__back" href="index.html">
@@ -62,8 +64,8 @@
         </p>
 
         <div class="doc-meta">
-          <span><strong data-en="Last updated:" data-pl="Ostatnia aktualizacja:">Last updated:</strong> <span data-en="19 November 2026" data-pl="19 listopada 2026">19 November 2026</span></span>
-          <span><strong data-en="Version:" data-pl="Wersja:">Version:</strong> 2.0</span>
+          <span><strong data-en="Last updated:" data-pl="Ostatnia aktualizacja:">Last updated:</strong> <span data-en="20 November 2026" data-pl="20 listopada 2026">20 November 2026</span></span>
+          <span><strong data-en="Version:" data-pl="Wersja:">Version:</strong> 2.1</span>
           <span><strong data-en="Data contact:" data-pl="Kontakt w sprawie danych:">Data contact:</strong> <a href="mailto:contact@dishd.pl">contact@dishd.pl</a></span>
         </div>
       </div>
@@ -147,9 +149,9 @@
 
         <section id="recipients">
           <h2 data-en="4. Recipients and transfers outside the EEA" data-pl="4. Odbiorcy i przekazywanie danych poza EOG">4. Recipients and transfers outside the EEA</h2>
-          <p data-en="Processors: Supabase Inc. (database, authentication, file storage), Google LLC (only when you sign in with Google, and for the web fonts on dishd.pl), our hosting provider and our transactional e-mail provider. Each one processes data only on our documented instructions."
-             data-pl="Podmioty przetwarzające: Supabase Inc. (baza danych, uwierzytelnianie, przechowywanie plików), Google LLC (wyłącznie przy logowaniu kontem Google oraz w zakresie krojów pisma na dishd.pl), dostawca hostingu oraz dostawca poczty transakcyjnej. Każdy z nich przetwarza dane wyłącznie na nasze udokumentowane polecenie.">
-            Processors: Supabase Inc. (database, authentication, file storage), Google LLC (only when you sign in with Google, and for the web fonts on dishd.pl), our hosting provider and our transactional e-mail provider. Each one processes data only on our documented instructions.
+          <p data-en="Processors: Supabase Inc. (database, authentication, file storage), Google LLC (only when you sign in with Google), our hosting provider and our transactional e-mail provider. Each one processes data only on our documented instructions. The dishd.pl website itself loads no third-party embeds, so browsing it sends your data to nobody except our hosting provider."
+             data-pl="Podmioty przetwarzające: Supabase Inc. (baza danych, uwierzytelnianie, przechowywanie plików), Google LLC (wyłącznie przy logowaniu kontem Google), dostawca hostingu oraz dostawca poczty transakcyjnej. Każdy z nich przetwarza dane wyłącznie na nasze udokumentowane polecenie. Sam serwis dishd.pl nie osadza treści podmiotów trzecich, więc przeglądanie go nie przekazuje danych nikomu poza naszym dostawcą hostingu.">
+            Processors: Supabase Inc. (database, authentication, file storage), Google LLC (only when you sign in with Google), our hosting provider and our transactional e-mail provider. Each one processes data only on our documented instructions. The dishd.pl website itself loads no third-party embeds, so browsing it sends your data to nobody except our hosting provider.
           </p>
           <p data-en="Where data leaves the European Economic Area, the transfer relies on the European Commission's Standard Contractual Clauses together with the provider's supplementary security measures. You can ask for a summary of those safeguards by e-mail."
              data-pl="Jeśli dane opuszczają Europejski Obszar Gospodarczy, podstawą przekazania są standardowe klauzule umowne Komisji Europejskiej wraz z dodatkowymi środkami bezpieczeństwa stosowanymi przez dostawcę. Podsumowanie tych zabezpieczeń udostępnimy na e-mail.">
@@ -281,7 +283,7 @@
           </p>
           <p><strong>Urząd Ochrony Danych Osobowych</strong><br />
             <span data-en="ul. Stawki 2, 00-193 Warsaw, Poland" data-pl="ul. Stawki 2, 00-193 Warszawa">ul. Stawki 2, 00-193 Warsaw, Poland</span><br />
-            <span data-en="Website:" data-pl="Strona:">Website:</span> <a href="https://uodo.gov.pl" target="_blank" rel="noopener noreferrer">uodo.gov.pl</a>
+            <span data-en="Website:" data-pl="Strona:">Website:</span> <a href="https://uodo.gov.pl" target="_blank" rel="noopener noreferrer">uodo.gov.pl<span class="sr-only" data-en=" (opens in a new tab)" data-pl=" (otwiera się w nowej karcie)"> (opens in a new tab)</span></a>
           </p>
           <p data-en="Complaints can be filed in Polish or in writing through the UODO website. You can also turn to a consumer organisation or, in cross-border cases, to the supervisory authority in your country of residence."
              data-pl="Skargę można złożyć w języku polskim lub pisemnie przez stronę UODO. Możesz też zwrócić się do organizacji konsumenckiej, a w sprawach transgranicznych — do organu nadzorczego w kraju zamieszkania.">
@@ -313,7 +315,7 @@
         </div>
 
         <div class="footer-col">
-          <h4 data-en="Site" data-pl="Serwis">Site</h4>
+          <h2 data-en="Site" data-pl="Serwis">Site</h2>
           <ul>
             <li><a href="index.html#about" data-en="The app" data-pl="Aplikacja">The app</a></li>
             <li><a href="index.html#idea" data-en="Idea" data-pl="Idea">Idea</a></li>
@@ -322,16 +324,18 @@
         </div>
 
         <div class="footer-col">
-          <h4 data-en="Documents" data-pl="Dokumenty">Documents</h4>
+          <h2 data-en="Documents" data-pl="Dokumenty">Documents</h2>
           <ul>
             <li><a href="privacy.html" data-en="Privacy Policy" data-pl="Polityka prywatności">Privacy Policy</a></li>
             <li><a href="terms.html" data-en="Terms of Service" data-pl="Regulamin">Terms of Service</a></li>
+            <li><a href="terms.html#refunds" data-en="Payments &amp; refunds" data-pl="Płatności i zwroty">Payments &amp; refunds</a></li>
+            <li><a href="privacy.html#cookies" data-en="Cookies" data-pl="Cookies">Cookies</a></li>
             <li><a href="gdpr.html" data-en="GDPR / RODO" data-pl="RODO">GDPR / RODO</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4 data-en="Contact" data-pl="Kontakt">Contact</h4>
+          <h2 data-en="Contact" data-pl="Kontakt">Contact</h2>
           <ul>
             <li><a href="mailto:contact@dishd.pl">contact@dishd.pl</a></li>
             <li><span data-en="Nico Jankowiak &amp; Tomasz Musioł" data-pl="Nico Jankowiak i Tomasz Musioł">Nico Jankowiak &amp; Tomasz Musioł</span></li>
