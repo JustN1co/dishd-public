@@ -44,15 +44,6 @@ html {
 body {
   margin: 0;
   background-color: var(--bg);
-  /* Photo backdrop (media/4-bg.jpg) with only a light scrim: legibility comes from the
-     content panels below (see "Photo background legibility"), not from veiling the photo. */
-  background-image:
-    linear-gradient(180deg, rgba(250, 247, 242, 0.26) 0%, rgba(250, 247, 242, 0.12) 42%, rgba(243, 235, 219, 0.34) 100%),
-    url("../media/4-bg.jpg");
-  background-size: cover, cover;
-  background-position: center top, center center;
-  background-repeat: no-repeat, no-repeat;
-  background-attachment: scroll, fixed;
   color: var(--ink);
   font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
@@ -60,6 +51,28 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+}
+
+/* Photo backdrop (media/4-bg.jpg) with only a light scrim: legibility comes from the
+   content panels below (see "Photo background legibility"), not from veiling the photo.
+   It sits on its own fixed layer instead of using background-attachment: fixed on
+   <body>: mobile browsers size and re-anchor those backgrounds as their toolbars
+   collapse, which made the photo jump between two positions while scrolling. A fixed
+   layer keeps a stable height (100lvh), so the photo stays put. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: -1;
+  height: 100vh;
+  height: 100lvh;
+  pointer-events: none;
+  background-image:
+    linear-gradient(180deg, rgba(250, 247, 242, 0.26) 0%, rgba(250, 247, 242, 0.12) 42%, rgba(243, 235, 219, 0.34) 100%),
+    url("../media/4-bg.jpg");
+  background-size: cover, cover;
+  background-position: center top, center center;
+  background-repeat: no-repeat, no-repeat;
 }
 
 h1, h2, h3, h4 {
@@ -1103,11 +1116,6 @@ ul, ol {
 }
 
 @media (max-width: 920px) {
-  /* fixed backgrounds are expensive to paint on mobile browsers */
-  body {
-    background-attachment: scroll, scroll;
-  }
-
   .hero__grid {
     grid-template-columns: 1fr;
     gap: clamp(32px, 6vw, 46px);
@@ -1233,6 +1241,10 @@ ul, ol {
 
   body {
     background: #fff;
+  }
+
+  body::before {
+    display: none;
   }
 
   .doc-layout {
