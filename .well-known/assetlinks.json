@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.dishd.app",
+    "sha256_cert_fingerprints": [
+      "4F:92:9D:6A:BE:70:77:6D:36:CC:28:9C:65:72:8A:E5:00:18:1B:96:7E:D6:10:85:2A:15:22:7C:EA:86:F9:44"
+    ]
+  }
+}]
