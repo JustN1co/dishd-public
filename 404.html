@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Otwieranie w Dishd...</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    a {
+      margin-top: 20px;
+      padding: 14px 28px;
+      background: #ff6b35;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+  </style>
+  <script>
+    const path = window.location.pathname + window.location.search;
+    const deepLink = "dishd:/" + path;
+    window.location.replace(deepLink);
+  </script>
+</head>
+<body>
+  <h2>Otwieranie przepisu w Dishd...</h2>
+  <p>Jeśli aplikacja nie otworzyła się automatycznie, kliknij poniżej:</p>
+  <a id="open-btn" href="dishd://">Otwórz w Dishd</a>
+  <script>
+    document.getElementById("open-btn").href = "dishd:/" + window.location.pathname + window.location.search;
+  </script>
+</body>
+</html>
