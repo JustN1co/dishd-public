@@ -491,7 +491,7 @@ ul, ol {
   filter: blur(6px);
 }
 
-/* Real app screenshot (media/screenshot.webp) in a soft, rounded device frame. */
+/* Real app screenshot (media/screenshot.jpg) in a soft, rounded device frame. */
 .shot {
   position: relative;
   width: min(100%, 386px);
